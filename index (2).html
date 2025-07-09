@@ -1,69 +1,82 @@
-<!DOCTYPE html>
-<html lang="ru">
+<!DOCTYPE html><html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Melon Battle Box</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: sans-serif;
-      background-color: #1e1e2f;
-      color: #fff;
+      background: #1e1e2f;
+      color: white;
+      font-family: 'Roboto', sans-serif;
       margin: 0;
-      padding: 0 1rem;
+      padding: 20px;
     }
-    h1 {
-      text-align: center;
-      margin-top: 1rem;
-    }
-    .rules {
-      background: #2b2b3d;
-      border-radius: 10px;
-      padding: 1rem;
-      margin: 1rem auto;
-      max-width: 600px;
+    h1, h2 {
+      color: #ffffff;
     }
     .card {
-      background: #2b2b3d;
+      background: #2c2c3c;
       border-radius: 10px;
-      padding: 1rem;
-      margin: 1rem auto;
-      max-width: 600px;
+      padding: 15px;
+      margin-bottom: 15px;
     }
-    img {
-      width: 100%;
-      max-width: 150px;
+    .card img {
+      max-width: 100px;
       display: block;
-      margin: 0 auto 1rem;
-      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+    .rules {
+      background: #2c2c3c;
+      padding: 15px;
+      border-radius: 10px;
+      margin-top: 30px;
+    }
+    .card-title {
+      font-size: 1.2em;
+      font-weight: bold;
     }
   </style>
 </head>
 <body>
   <h1>Melon Battle Box</h1>
-  <div class="rules">
+  <p>Коллекционная карточная игра с пошаговыми боями между фруктами и роботами.</p>  <div class="card">
+    <img src="images/melon.png" alt="Мелон">
+    <div class="card-title">1. Мелон</div>
+    <p>Здоровье: 3 | Защита: 1 | Атака: 2</p>
+  </div>  <div class="card">
+    <img src="images/corn.png" alt="Кукуруза">
+    <div class="card-title">2. Кукуруза</div>
+    <p>Здоровье: 2 | Защита: 3 | Атака: 1</p>
+  </div>  <div class="card">
+    <img src="images/pumpkin.png" alt="Тыква">
+    <div class="card-title">3. Тыква</div>
+    <p>Здоровье: 4 | Атака: 2 | Защиты нет</p>
+  </div>  <div class="card">
+    <img src="images/cactus.png" alt="Кактус">
+    <div class="card-title">4. Кактус</div>
+    <p>Здоровье: 2 | Атака: 2 | При ударе наносит урон врагу</p>
+  </div>  <div class="card">
+    <img src="images/pitaya.png" alt="Питая">
+    <div class="card-title">5. Питая</div>
+    <p>Здоровье: 3 | Защита: 3 | Атака: 1</p>
+  </div>  <div class="card">
+    <img src="images/robot.png" alt="Робот">
+    <div class="card-title">6. Робот</div>
+    <p>Здоровье: 6 | Атака: 2 | Защиты нет</p>
+  </div>  <!-- Добавь остальные карточки по шаблону -->  <div class="rules">
     <h2>Правила игры</h2>
-    <p>
-      <strong>Подготовка к бою:</strong><br>
-      В начале каждого раунда оба игрока берут по 5 случайных карт из своей колоды. Затем каждый игрок выбирает и выставляет 3 карты на арену. Первые две карты могут участвовать в бою сразу, третья остаётся в резерве.
-    </p>
-    <p>
-      <strong>Бой:</strong><br>
-      Перед началом боя каждый игрок выбирает для каждой своей карты (кроме последней) — <em>атаку</em> или <em>защиту</em>.<br>
-      Затем случайным образом выбирается, кто ходит первым.
-    </p>
-    <p>
-      Если карта выбрала <strong>защиту</strong>, она получает щит, равный своей защите. Когда по ней наносится урон, щит поглощает часть урона. Пример: если у карты 2 защиты, а её атакуют на 3 урона — она теряет 1 здоровье.
-    </p>
-    <p>
-      Если карта выбрала <strong>атаку</strong>, она наносит урон, равный значению атаки на карточке.
-    </p>
-    <p>
-      Бой продолжается, пока все карты одного игрока на арене не будут уничтожены. Победителю возвращаются уцелевшие карты, и он добирает карты до 5. После этого начинается новый раунд.
-    </p>
-    <p>
-      Игра продолжается, пока у одного из игроков не закончатся все карты. Тот, кто остался без карт, проигрывает.
-    </p>
+    <ol>
+      <li>Каждый игрок берёт 5 карт из своей колоды.</li>
+      <li>Из них выбираются 3 карты и выкладываются на арену — это подготовка к бою.</li>
+      <li>Каждый игрок выбирает для двух первых юнитов режим: атака или защита (третий всегда в атаке).</li>
+      <li>Случайным образом определяется, кто ходит первым.</li>
+      <li>Игрок выполняет действия юнитов по очереди: атака наносит урон, защита даёт временную защиту.</li>
+      <li>Защита уменьшает входящий урон. Например: 3 урона — 2 защиты = 1 урон.</li>
+      <li>После боя победивший игрок возвращает выжившие карты, проигравший теряет свои.</li>
+      <li>Победитель добирает карты до 5, новый бой начинается снова.</li>
+      <li>Игра заканчивается, когда у одного из игроков не осталось карт.</li>
+    </ol>
   </div>
 </body>
 </html>
